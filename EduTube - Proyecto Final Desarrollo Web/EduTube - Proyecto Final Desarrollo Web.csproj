@@ -101,10 +101,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Categorias.html" />
+    <Content Include="css\estilos.css" />
     <Content Include="Global.asax" />
+    <Content Include="img\3135715.png" />
+    <Content Include="img\avatar.jpg" />
     <Content Include="img\Background.jpg" />
+    <Content Include="img\thumb.png" />
+    <Content Include="index.html" />
+    <Content Include="js\main.js" />
     <Content Include="Main.aspx" />
     <Content Include="PruebaVideo.aspx" />
+    <Content Include="Subir videos.html" />
     <Content Include="videos\JULIOPRFE.mp4" />
     <Content Include="Web.config" />
   </ItemGroup>
