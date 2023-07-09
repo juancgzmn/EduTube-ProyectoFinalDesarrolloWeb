@@ -217,24 +217,24 @@ a {
 		margin-bottom: 20px;
 	}
 
-	.main .grid-videos {
+	.main .gridVideos {
 		display: grid;
 		grid-gap: 40px 20px;
 		grid-template-columns: repeat(4, 1fr);
 	}
 
-		.main .grid-videos .video {
+		.main .gridVideos .video {
 			width: 100%;
 			display: block;
 		}
 
-			.main .grid-videos .video img {
+			.main .gridVideos .video img {
 				width: 100%;
 			}
 
 /* ---- ---- ---- Mediaqueries ---- ---- ---- */
 @media screen and (max-width: 1200px) {
-	.main .grid-videos {
+	.main .gridVideos {
 		grid-template-columns: repeat(3, 1fr);
 	}
 
@@ -248,7 +248,7 @@ a {
 }
 
 @media screen and (max-width: 992px) {
-	.main .grid-videos {
+	.main .gridVideos {
 		grid-template-columns: repeat(2, 1fr);
 	}
 }
@@ -277,7 +277,27 @@ a {
 }
 
 @media screen and (max-width: 576px) {
-	.main .grid-videos {
+	.main .gridVideos {
 		grid-template-columns: 1fr;
 	}
+}
+
+/* Estilos para el popup */
+.popup {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: none;
+	justify-content: center;
+	align-items: center;
+}
+
+.popup-content {
+	background-color: white;
+	padding: 20px;
+	border-radius: 5px;
+	text-align: center;
 }

@@ -112,10 +112,11 @@
     <Content Include="img\avatar.jpg" />
     <Content Include="img\Background.jpg" />
     <Content Include="img\thumb.png" />
-    <Content Include="index.html" />
+    <Content Include="IndexWF.aspx" />
     <Content Include="js\main.js" />
     <Content Include="Main.aspx" />
     <Content Include="PruebaVideo.aspx" />
+    <Content Include="Subir Video.aspx" />
     <Content Include="Subir videos.html" />
     <Content Include="videos\JULIOPRFE.mp4" />
     <Content Include="Web.config" />
@@ -125,6 +126,13 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="IndexWF.aspx.cs">
+      <DependentUpon>IndexWF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IndexWF.aspx.designer.cs">
+      <DependentUpon>IndexWF.aspx</DependentUpon>
     </Compile>
     <Compile Include="Main.aspx.cs">
       <DependentUpon>Main.aspx</DependentUpon>
@@ -140,6 +148,13 @@
     </Compile>
     <Compile Include="PruebaVideo.aspx.designer.cs">
       <DependentUpon>PruebaVideo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Subir Video.aspx.cs">
+      <DependentUpon>Subir Video.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Subir Video.aspx.designer.cs">
+      <DependentUpon>Subir Video.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

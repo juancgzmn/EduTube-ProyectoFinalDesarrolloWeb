@@ -18,45 +18,52 @@ window.addEventListener('resize', () => {
 	comprobarAncho();
 });
 function redirectToEducaTube() {
-	window.open("index.html", "_self");
+	window.open("IndexWF.aspx", "_self");
 }
 
-// Supongamos que tienes un arreglo de URLs de tus videos obtenidos de la base de datos
-const videoURLs = [
-	"https://www.example.com/video1.mp4",
-	"https://www.example.com/video2.mp4",
-	"https://www.example.com/video3.mp4",
-	"https://www.example.com/video1.mp4",
-	"https://www.example.com/video2.mp4",
-	"https://www.example.com/video3.mp4",
-	"https://www.example.com/video1.mp4",
-	"https://www.example.com/video2.mp4",
-	"https://www.example.com/video3.mp4",
-	"https://www.example.com/video1.mp4",
-	"https://www.example.com/video2.mp4",
-	"https://www.example.com/video3.mp4",
-	// Agrega las URLs de tus videos aquí
-];
-
-// Obtén la referencia al contenedor de videos en el DOM
-const gridVideos = document.getElementById("grid-videos");
-
-// Genera el contenido de los videos
-videoURLs.forEach((url) => {
-	const videoLink = document.createElement("a");
-	videoLink.href = url;
-	videoLink.className = "video";
-
-	const videoThumbnail = document.createElement("img");
-	videoThumbnail.src = "https://via.placeholder.com/500x281?text=Placeholder";
-	videoThumbnail.alt = "";
-
-	videoLink.appendChild(videoThumbnail);
-	gridVideos.appendChild(videoLink);
-});
 const uploadButton = document.getElementById("upload-button");
 uploadButton.addEventListener("click", redirectToAnotherPage);
 
 function redirectToAnotherPage() {
 	window.open("Subir videos.html", "_self");
 }
+
+
+// Manejador de eventos para enviar el formulario de subida de video
+document.getElementById('upload-form').addEventListener('submit', function (event) {
+    event.preventDefault(); // Evitar el envío del formulario
+
+    // Obtener los valores ingresados por el usuario
+    var titulo = document.getElementById('titulo-input').value;
+    var descripcion = document.getElementById('descripcion-input').value;
+    var categoria = document.getElementById('categoria-select').value;
+    var imagen = document.getElementById('imagen-input').files[0];
+    var video = document.getElementById('video-input').files[0];
+
+    // Verificar que se hayan ingresado todos los valores
+    if (titulo && descripcion && categoria && imagen && video) {
+        // Verificar el tamaño del archivo de imagen (opcional)
+        if (imagen.size > 10 * 1024 * 1024) {
+            alert('La imagen debe tener un tamaño máximo de 10 MB');
+            return;
+        }
+
+        // Verificar el tamaño del archivo de video (opcional)
+        if (video.size > 10 * 1024 * 1024) {
+            alert('El video debe tener un tamaño máximo de 10 MB');
+            return;
+        }
+
+        // Aquí puedes agregar la lógica para subir el video y los datos adicionales
+        console.log('Video subido correctamente');
+        console.log('Título:', titulo);
+        console.log('Descripción:', descripcion);
+        console.log('Categoría:', categoria);
+        console.log('Imagen:', imagen);
+        console.log('Video:', video);
+
+        closePopup();
+    } else {
+        alert('Por favor, complete todos los campos');
+    }
+});
