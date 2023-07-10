@@ -43,16 +43,10 @@
 			<main class="main">
 				<div id="gridVideos" class="gridVideos" runat="server">
 				
-				</div>
-				
-				
+				</div>	
 			</main>
 		</div>
 	</form>
-
-	
-
-
 	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
 	<script src="js/main.js"></script>
 </body>

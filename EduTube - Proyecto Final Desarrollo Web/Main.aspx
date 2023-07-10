@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Pagina ¿Qué quieres aprender hoy? | EducaTube</title>
 
     <style>
 
@@ -42,7 +42,7 @@
             font-size:45px; 
             color: white;
             transition: background-color 1s, color 1s;
-
+            border-radius: 20px;
         }
 
         button:hover{
