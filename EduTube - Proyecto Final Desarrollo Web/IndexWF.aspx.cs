@@ -61,11 +61,11 @@ namespace EduTube___Proyecto_Final_Desarrollo_Web
             }
         }
 
-        protected void Buscar_Click(object sender, EventArgs e)
+        protected void btnBuscar_Click(object sender, EventArgs e)
         {
             string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\juanc\\source\\repos\\EduTube - Proyecto Final Desarrollo Web\\EduTube - Proyecto Final Desarrollo Web\\App_Data\\EduTubeDB.mdf\";Integrated Security=True"; // Cadena de conexión
 
-            string busqueda = Request.Form["busqueda"]; // Obtener el valor de la barra de búsqueda
+            string busqueda = Request.Form["txtBusqueda"]; // Obtener el valor de la barra de búsqueda
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {

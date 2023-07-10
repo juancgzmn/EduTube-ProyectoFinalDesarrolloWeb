@@ -20,8 +20,8 @@
 				</div>
 
 				<div class="barra-busqueda">
-					<input type="text" placeholder="Buscar" id="busqueda">
-					<button type="submit" onclick="Buscar_Click()" id="btnBuscar"><i class="fas fa-search"></i></button>
+					<input type="text" placeholder="Buscar" ClientIDMode="Static" runat="server" id="txtBusqueda">
+					<asp:Button ID="btnBuscar" runat="server" Text="Buscar" OnClick="btnBuscar_Click" class="fas fa-search"/>
 				</div>
 
 				<div class="botones-header">

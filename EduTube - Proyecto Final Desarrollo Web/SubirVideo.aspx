@@ -110,8 +110,8 @@
 					<input type="file" id="File1" accept="image/*" runat="server" />
 					<input type="file" id="File2" accept="video/*" runat="server" />
 
-					<button type="button" id="btnSubmit" runat="server">Subir</button>
 					
+					<asp:Button ID="btnSubmit" runat="server" Text="Subir" OnClick="btnSubmit_Click" />
 					<button type="button" id="cancel-upload-button">Cancelar</button>
 					
 				</form>
@@ -129,10 +129,10 @@
 	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
 	<script src="js/main.js"></script>
 	<script>
-       
+       /*
             document.getElementById('btnSubmit').addEventListener('click', function(event) {
 				
-				/*
+				
                 event.preventDefault(); // Evitar el envío del formulario
 
                 // Obtener los valores ingresados por el usuario
@@ -168,7 +168,7 @@
                 } else {
                     alert('Por favor, complete todos los campos');
                 }
-				*/
+				
                 var titulo = document.getElementById('Text1').value;
                 var descripcion = document.getElementById('Textarea1').value;
 				var categoria = document.getElementById('Select1').value;
@@ -237,7 +237,7 @@
    
 
 
-
+			*/
         
 
 
