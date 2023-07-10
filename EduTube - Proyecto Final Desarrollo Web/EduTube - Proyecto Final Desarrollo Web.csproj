@@ -106,22 +106,33 @@
       <DependentUpon>EduTubeDB.mdf</DependentUpon>
     </Content>
     <Content Include="Categorias.html" />
+    <Content Include="CMat.aspx" />
     <Content Include="css\estilos.css" />
     <Content Include="Global.asax" />
+    <Content Include="guardar-archivo.php" />
     <Content Include="img\3135715.png" />
     <Content Include="img\avatar.jpg" />
     <Content Include="img\Background.jpg" />
+    <Content Include="img\Lionel.jpg" />
     <Content Include="img\thumb.png" />
     <Content Include="IndexWF.aspx" />
     <Content Include="js\main.js" />
     <Content Include="Main.aspx" />
     <Content Include="SubirVideo.aspx" />
     <Content Include="videos\JULIOPRFE.mp4" />
+    <Content Include="videos\messividprueba.mp4" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="CMat.aspx.cs">
+      <DependentUpon>CMat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CMat.aspx.designer.cs">
+      <DependentUpon>CMat.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

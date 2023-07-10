@@ -20,8 +20,8 @@
 				</div>
 
 				<div class="barra-busqueda">
-					<input type="text" placeholder="Buscar">
-					<button type="submit"><i class="fas fa-search"></i></button>
+					<input type="text" placeholder="Buscar" id="busqueda">
+					<button type="submit" onclick="Buscar_Click()" id="btnBuscar"><i class="fas fa-search"></i></button>
 				</div>
 
 				<div class="botones-header">

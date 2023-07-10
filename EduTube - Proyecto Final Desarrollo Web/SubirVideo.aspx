@@ -110,11 +110,16 @@
 					<input type="file" id="File1" accept="image/*" runat="server" />
 					<input type="file" id="File2" accept="video/*" runat="server" />
 
-					<button type="submit" id="btnSubmit" onclick="SubmitButton_Click">Subir</button>
+					<button type="button" id="btnSubmit" runat="server">Subir</button>
+					
 					<button type="button" id="cancel-upload-button">Cancelar</button>
+					
 				</form>
+
+				
 			</div>
 
+			
 
 		</main>
 
@@ -123,5 +128,119 @@
 	</div>
 	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
 	<script src="js/main.js"></script>
+	<script>
+       
+            document.getElementById('btnSubmit').addEventListener('click', function(event) {
+				
+				/*
+                event.preventDefault(); // Evitar el envío del formulario
+
+                // Obtener los valores ingresados por el usuario
+                var titulo = document.getElementById('Text1').value;
+                var descripcion = document.getElementById('Textarea1').value;
+                var categoria = document.getElementById('Select1').value;
+                var imagen = document.getElementById('File1').file[0];
+                var video = document.getElementById('File2').files[0];
+
+                // Verificar que se hayan ingresado todos los valores
+                if (titulo && descripcion && categoria && imagen && video) {
+                    // Verificar el tamaño del archivo de imagen (opcional)
+                    if (imagen.size > 10 * 1024 * 1024) {
+                        alert('La imagen debe tener un tamaño máximo de 10 MB');
+                        return;
+                    }
+
+                    // Verificar el tamaño del archivo de video (opcional)
+                    if (video.size > 10 * 1024 * 1024) {
+                        alert('El video debe tener un tamaño máximo de 10 MB');
+                        return;
+                    }
+
+                    // Aquí puedes agregar la lógica para subir el video y los datos adicionales
+                    console.log('Video subido correctamente');
+                    console.log('Título:', titulo);
+                    console.log('Descripción:', descripcion);
+                    console.log('Categoría:', categoria);
+                    console.log('Imagen:', imagen);
+                    console.log('Video:', video);
+
+                    closePopup();
+                } else {
+                    alert('Por favor, complete todos los campos');
+                }
+				*/
+                var titulo = document.getElementById('Text1').value;
+                var descripcion = document.getElementById('Textarea1').value;
+				var categoria = document.getElementById('Select1').value;
+
+				
+                var imagenFile = document.getElementById('File1').files[0];
+                var videoFile = document.getElementById('File2').files[0];
+
+                var imagenFolderPath = "C:\\Users\\juanc\\source\\repos\\EduTube - Proyecto Final Desarrollo Web\\EduTube - Proyecto Final Desarrollo Web\\img\\" + imagenFile.name;
+                var videoFolderPath = "C:\\Users\\juanc\\source\\repos\\EduTube - Proyecto Final Desarrollo Web\\EduTube - Proyecto Final Desarrollo Web\\videos\\" + videoFile.name;
+
+                // Guardar los archivos en las ubicaciones especificadas
+                saveFile(imagenFile, imagenFolderPath);
+                saveFile(videoFile, videoFolderPath);
+
+                // Obtener las URL de los archivos
+                var imagenURL = "../img/" + imagenFile.name;
+                var videoURL = "../videos/" + videoFile.name;
+
+                function saveFile(file, filePath) {
+                    var formData = new FormData();
+                    formData.append('file', file);
+
+                    
+				}
+				
+
+				//Calculo del ID categoria
+                if (categoria == "Matematicas") categoria = "1";
+                else if (categoria == "Tecnologia") categoria = "2";
+                else if (categoria == "Historia") categoria = "3";
+                else if (categoria == "Artes") categoria = "4";
+                else if (categoria == "Ciencias") categoria = "5";
+                else if (categoria == "Deportes") categoria = "6";
+
+
+				//Funcion que realiza carga a la base de datos
+                function cargarVideo(titulo, descripcion, imagenURL, videoURL, categoria) {
+                    var videoData = {
+                        Titulo: titulo,
+                        Descripcion: descripcion,
+                        ImagenURL: imagenURL,
+                        VideoURL: videoURL,
+                        CategoriaId: categoria
+                    };
+
+                    $.ajax({
+                        type: "POST",
+                        url: "api/VideosController/ApiController",
+                        data: JSON.stringify(videoData),
+                        contentType: "application/json; charset=utf-8",
+                        dataType: "json",
+                        success: function (response) {
+                            console.log("Video cargado exitosamente");
+                        },
+                        error: function (error) {
+                            console.error("Error al cargar el video:", error);
+                        }
+                    });
+                }
+
+
+
+
+			});
+   
+
+
+
+        
+
+
+    </script>
 </body>
 </html>
