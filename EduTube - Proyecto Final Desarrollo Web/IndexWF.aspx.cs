@@ -53,6 +53,7 @@ namespace EduTube___Proyecto_Final_Desarrollo_Web
                             videoLink.Controls.Add(videoThumbnail);
                             videoLink.Controls.Add(videoTitulo);
                             gridVideos.Controls.Add(videoLink);
+                            
                         }
                     }
                 }

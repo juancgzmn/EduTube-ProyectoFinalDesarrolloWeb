@@ -16,7 +16,7 @@
 			<header class="header">
 				<div class="contenedor-logo">
 					<button id="boton-menu" class="boton-menu"><i class="fas fa-bars"></i></button>
-					<button class="logo" onclick="redirectToEducaTube()"><i class="fas fa-book-open"></i> <span>EducaTube</span></button>
+					<button class="logo" ><i class="fas fa-book-open" onclick="redirectToEducaTube()"></i> <span>EducaTube</span></button>
 				</div>
 
 				<div class="barra-busqueda">
@@ -26,7 +26,7 @@
 
 				<div class="botones-header">
 					<button id="upload-button"><i class="fas fa-upload"></i></button>
-					<a onclick="#Subir Video.aspx" class="avatar"><img src="img/3135715.png" alt=""></a>
+					<a class="avatar"><img src="img/3135715.png" ></a>
 				</div>
 			</header>
 
@@ -44,7 +44,6 @@
 				<div id="gridVideos" class="gridVideos" runat="server">
 				
 				</div>
-
 				
 				
 			</main>

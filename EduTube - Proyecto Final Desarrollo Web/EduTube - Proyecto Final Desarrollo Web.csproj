@@ -115,9 +115,7 @@
     <Content Include="IndexWF.aspx" />
     <Content Include="js\main.js" />
     <Content Include="Main.aspx" />
-    <Content Include="PruebaVideo.aspx" />
-    <Content Include="Subir Video.aspx" />
-    <Content Include="Subir videos.html" />
+    <Content Include="SubirVideo.aspx" />
     <Content Include="videos\JULIOPRFE.mp4" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -142,19 +140,12 @@
       <DependentUpon>Main.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="PruebaVideo.aspx.cs">
-      <DependentUpon>PruebaVideo.aspx</DependentUpon>
+    <Compile Include="SubirVideo.aspx.cs">
+      <DependentUpon>SubirVideo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="PruebaVideo.aspx.designer.cs">
-      <DependentUpon>PruebaVideo.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Subir Video.aspx.cs">
-      <DependentUpon>Subir Video.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Subir Video.aspx.designer.cs">
-      <DependentUpon>Subir Video.aspx</DependentUpon>
+    <Compile Include="SubirVideo.aspx.designer.cs">
+      <DependentUpon>SubirVideo.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

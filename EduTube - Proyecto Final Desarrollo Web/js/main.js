@@ -18,19 +18,18 @@ window.addEventListener('resize', () => {
 	comprobarAncho();
 });
 function redirectToEducaTube() {
-	window.open("IndexWF.aspx", "_self");
+    window.open("IndexWF.aspx", "_self");
 }
 
-const uploadButton = document.getElementById("upload-button");
-uploadButton.addEventListener("click", redirectToAnotherPage);
-
-function redirectToAnotherPage() {
-	window.open("Subir videos.html", "_self");
+function redirectToSubirVideo() {
+    window.open("SubirVideo.aspx", "_self");
 }
+
+
 
 
 // Manejador de eventos para enviar el formulario de subida de video
-document.getElementById('upload-form').addEventListener('submit', function (event) {
+document.getElementById('upload-form-container').addEventListener('submit', function (event) {
     event.preventDefault(); // Evitar el envío del formulario
 
     // Obtener los valores ingresados por el usuario
@@ -66,4 +65,8 @@ document.getElementById('upload-form').addEventListener('submit', function (even
     } else {
         alert('Por favor, complete todos los campos');
     }
+
+
+
 });
+
